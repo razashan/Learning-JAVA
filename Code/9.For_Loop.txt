@@ -1,0 +1,177 @@
+package com.company;
+
+public class for_exm {
+    public static void main(String args[]){
+        for (int i = 0; i < 5; i++) {
+            System.out.println(i);
+        }
+    }
+}
+
+
+___________________________________________________________________________________________________________
+
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+                for (String k : cars) {
+                    System.out.println(k);
+
+
+___________________________________________________________________________________________________________
+
+ for (int j = 0; j <= 10; j = j + 2) {
+                System.out.println(j);
+
+
+________________________________________________________________________________________________________________
+
+
+for (int i = 0; i < 10; i++) 
+        { 
+            // terminate loop when i is 5. 
+            if (i == 5) 
+                break; 
+  
+            System.out.println("i: " + i); 
+        } 
+        System.out.println("Loop complete.");
+
+
+
+________________________________________________________________________________________________________________
+
+for (int i = 0; i < 10; i++) 
+        { 
+            // If the number is even 
+            // skip and continue 
+            if (i%2 == 0) 
+                continue; 
+  
+            // If number is odd, print it 
+            System.out.print(i + " "); 
+        } 
+
+________________________________________________________________________________________________________________
+Write a program in Java to display the first 10 natural numbers.
+
+public class Exercise10 {
+    
+  public static void main(String[] args)
+    {     
+    int i;
+	System.out.println ("The first 10 natural numbers are:\n");
+	for (i=1;i<=10;i++)
+	{      
+		System.out.println (i);
+	}
+System.out.println ("\n");
+}
+}
+
+___________________________________________________________________________________________________________________
+Write a program in Java to display n terms of natural numbers and their sum
+
+
+import java.util.Scanner;
+public class Exercise11 {
+
+    
+  public static void main(String[] args)
+
+{
+   int i, n, sum=0;
+   {
+   Scanner in = new Scanner(System.in);  
+        System.out.print("Input number: ");  
+         n = in.nextInt();
+}
+  System.out.println("The first n natural numbers are : "+n);
+  
+ for(i=1;i<=n;i++)
+   {
+     System.out.println(i);
+     sum+=i;
+   }
+System.out.println("The Sum of Natural Number upto "+n+ " terms : " +sum);
+
+}
+}
+
+__________________________________________________________________________________________________________________________
+Write a program in Java to input 5 numbers from keyboard and find their sum and average.
+
+
+import java.util.Scanner;
+public class Exercise12 {
+
+    
+  public static void main(String[] args)
+
+{       
+    int i,n=0,s=0;
+	double avg;
+	{
+	   
+        System.out.println("Input the 5 numbers : ");  
+         
+	}
+		for (i=0;i<5;i++)
+		{
+		    Scanner in = new Scanner(System.in);
+		    n = in.nextInt();
+		    
+  		s +=n;
+	}
+	avg=s/5;
+	System.out.println("The sum of 5 no is : " +s+"\nThe Average is : " +avg);
+ 
+}
+}
+____________________________________________________________________________________________________________________________
+
+Write a program in Java to display the cube of the number upto given an integer.
+
+import java.util.Scanner;
+public class Exercise13 {
+
+   public static void main(String[] args)
+
+{
+    int i,n;
+
+    System.out.print("Input number of terms : ");
+    Scanner in = new Scanner(System.in);
+		    n = in.nextInt();
+
+     for(i=1;i<=n;i++)
+     {
+     System.out.println("Number is : " +i+" and cube of " +i+" is : "+(i*i*i));     
+    }
+ }
+}
+
+________________________________________________________________________________________________________________________________
+Write a program in Java to display the multiplication table of a given integer.
+
+import java.util.Scanner;
+public class Exercise14 {
+
+   public static void main(String[] args)
+
+{
+   int j,n;
+
+   System.out.print("Input the number(Table to be calculated): ");
+{
+   System.out.print("Input number of terms : ");
+    Scanner in = new Scanner(System.in);
+		    n = in.nextInt();
+
+   System.out.println ("\n");
+   for(j=0;j<=n;j++)
+  
+     System.out.println(n+" X "+j+" = " +n*j);
+   }
+}
+}
+
+_________________________________________________________________________________________________________________________________

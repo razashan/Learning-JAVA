@@ -1,0 +1,30 @@
+package com.company;
+
+public class IF_Examples {
+    public  static void main(String args[]){
+        int i = 10;
+        if (i>15)
+            System.out.println("10 is less then 15");
+        System.out.println("I am not in if");
+    }
+}
+
+-------------------------------------------------------------------------------------------------------------------
+
+package com.company;
+
+public class IF_Exam1 {
+    public static void main(String args[]){
+        int i = 20;
+
+        if (i == 10)
+            System.out.println("i is 10");
+        else if (i == 15)
+            System.out.println("i is 15");
+        else if (i == 20)
+            System.out.println("i is 20");
+        else
+            System.out.println("i is not present");
+    }
+}
+-------------------------------------------------------------------------------------------------------------------
