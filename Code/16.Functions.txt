@@ -1,0 +1,161 @@
+Find the smallest number among three numbers
+
+import java.util.Scanner;
+public class Exercise1 {
+
+ public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Input the first number: ");
+        double x = in.nextDouble();
+        System.out.print("Input the Second number: ");
+        double y = in.nextDouble();
+        System.out.print("Input the third number: ");
+        double z = in.nextDouble();
+        System.out.print("The smallest value is " + smallest(x, y, z)+"\n" );
+    }
+
+   public static double smallest(double x, double y, double z)
+    {
+        return Math.min(Math.min(x, y), z);
+    }
+}
+
+-----------------------------------------------------------------------------------------------
+
+Compute the average of three numbers
+
+import java.util.Scanner;
+public class Exercise2 {
+
+ public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Input the first number: ");
+        double x = in.nextDouble();
+        System.out.print("Input the second number: ");
+        double y = in.nextDouble();
+        System.out.print("Input the third number: ");
+        double z = in.nextDouble();
+        System.out.print("The average value is " + average(x, y, z)+"\n" );
+    }
+
+  public static double average(double x, double y, double z)
+    {
+        return (x + y + z) / 3;
+    }
+}
+
+----------------------------------------------------------------------------------------------------
+
+Display the middle character of a string
+
+import java.util.Scanner;
+public class IF_Examples {
+
+    public static String middle(String str){
+        int position;
+        int length;
+        if (str.length() % 2==0){
+            position = str.length() /2 -1;
+            length = 2;
+
+        }
+        else {
+            position = str.length()/2;
+            length = 1;
+        }
+    return str.substring(position,position + length);
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the text");
+        String str = in.nextLine();
+        System.out.println(" The middle character in the string is " + middle(str)+"\n");
+
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------
+Write a Java method to count all vowels in a string
+
+import java.util.Scanner;
+public class IF_Examples {
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Input the string");
+        String str = in.nextLine();
+
+        System.out.println("Number of vowels in the string: "+ count_vowels(str)+"\n");
+    }
+    public static int count_vowels(String str){
+        int count = 0;
+        for(int i = 0; i<str.length(); i++){
+            if(str.charAt(i)== 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i)== 'u')
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------
+Write a Java method to count all words in a string.
+
+import java.util.Scanner;
+public class IF_Examples {
+
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Input the string: ");
+        String str = in.nextLine();
+
+        System.out.print("Number of words in the string: " + count_Words(str)+"\n");
+    }
+
+    public static int count_Words(String str)
+    {
+        int count = 0;
+        if (!(" ".equals(str.substring(0, 1))) || !(" ".equals(str.substring(str.length() - 1))))
+        {
+            for (int i = 0; i < str.length(); i++)
+            {
+                if (str.charAt(i) == ' ')
+                {
+                    count++;
+                }
+            }
+            count = count + 1;
+        }
+        return count; // returns 0 if string starts or ends with space " ".
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------
+Write a Java method to compute the future investment value at a given interest rate for a specified number of years.
+
+import java.util.Scanner;
+public class Project {
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Input the investment amount ");
+        double Investment = in.nextDouble();
+        System.out.println("Input the rate of interest");
+        double rate = in.nextDouble();
+        System.out.println("Input the years");
+        int years = in.nextInt();
+
+        rate *=0.01;
+        System.out.println("Years Future Value");
+        for(int i=1; i<=years; i++){
+            int formatter = 19;
+            if(i>=10)
+                formatter = 18;
+            System.out.printf(i+ "% "+formatter +".2f\n", futureInvestmentValue(Investment,rate/12,i));
+        }
+    }
+    public static double futureInvestmentValue(double investmentAmount, double monthlyInterestRate, int years){
+        return investmentAmount * Math.pow(1 + monthlyInterestRate,years *12);
+    }
+}

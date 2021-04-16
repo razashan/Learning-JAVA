@@ -1,0 +1,135 @@
+---------------------------------------------- JAVA METHODS-------------------------------------------------
+import org.w3c.dom.ls.LSOutput;
+import java.util.Scanner;
+public class IF_Examples{
+
+    static void mymethod(){
+        System.out.println("I just got executed");
+    }
+public static void main(String args[]){
+        mymethod();
+
+    }
+  }
+
+
+----------------------------------------------------------------------------------------------------------
+import org.w3c.dom.ls.LSOutput;
+import java.util.Scanner;
+public class IF_Examples{
+
+    static void mymethod(String fname){
+        System.out.println(fname + " Refsnes");
+        System.out.println("I just got executed");
+    }
+public static void main(String args[]){
+        mymethod("Liam");
+        mymethod("Jenny");
+        mymethod("Anja");
+
+    }
+  }
+
+
+---------------------------------------------------
+Multiple Parameters
+
+public class Main {
+  static void myMethod(String fname, int age) {
+    System.out.println(fname + " is " + age);
+  }
+
+  public static void main(String[] args) {
+    myMethod("Liam", 5);
+    myMethod("Jenny", 8);
+    myMethod("Anja", 31);
+  }
+}
+
+
+---------------------------------------------------------
+Return Values
+
+public class IF_Examples{
+
+    static int mymethod(int x){
+        System.out.println(x + 5);
+        return x;
+
+
+    }
+public static void main(String args[]){
+        mymethod(5);
+        mymethod(9);
+        mymethod(10);
+
+    }
+  }
+
+-----------------------------------------------------------------
+
+public class Main {
+  static int myMethod(int x, int y) {
+    return x + y;
+  }
+
+  public static void main(String[] args) {
+    System.out.println(myMethod(5, 3));
+  }
+}
+
+-------------------------------------------------------------------
+
+public class IF_Examples{
+
+    static void mymethod(int x){
+        if(x <18){
+            System.out.println("Acces denied you are not old enough");
+        }
+        else {
+            System.out.println("You are old enough");
+        }
+    }
+public static void main(String[] args){
+        mymethod(5);
+        mymethod(9);
+        mymethod(10);
+
+    }
+  }
+-----------------------------------------------------------------------------
+Method Overloading
+
+public class IF_Examples{
+
+    static int plusmethodint(int x, int y){
+        return x + y;
+    }
+    static double plusmethoddouble(double x, double y){
+        return x+y;
+    }
+public static void main(String[] args){
+        int mynum1 = plusmethodint(8,5);
+        double mynum2 = plusmethoddouble(4.3,7.8);
+    System.out.println("int "+ mynum1);
+    System.out.println("Double "+ mynum2);
+    }
+  }
+----------------------------------------------------------------------------------------------
+public class IF_Examples{
+
+    static int plusmethod(int x, int y){
+        return x + y;
+    }
+    static double plusmethod(double x, double y){
+        return x+y;
+    }
+public static void main(String[] args){
+        int mynum1 = plusmethod(8,5);
+        double mynum2 = plusmethod(4.3,7.8);
+    System.out.println("int "+ mynum1);
+    System.out.println("Double "+ mynum2);
+    }
+  }
+
+
