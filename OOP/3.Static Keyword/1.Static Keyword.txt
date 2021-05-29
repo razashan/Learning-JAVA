@@ -1,0 +1,12 @@
+class Scratch{
+    static int count = 0;
+    Scratch(){
+        count ++;
+        System.out.println(count);
+    }
+    public static void main(String args[]){
+        Scratch s1= new Scratch();
+        Scratch s2 = new Scratch();
+        Scratch s3 = new Scratch();
+    }
+}

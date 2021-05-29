@@ -1,0 +1,69 @@
+Creating multiple objects by one type only
+We can create multiple objects by one type only as we do in case of primitives.
+
+class Rectangle{
+    int length;
+    int width;
+    void insert(int l, int w){
+        length = l;
+        width = w;
+    }
+    void calarea(){
+        System.out.println("Area is "+ length*width);
+    }
+}
+class scratch_2{
+    public static void main(String args[]){
+        Rectangle r1 = new Rectangle(),r2 = new Rectangle();
+        r1.insert(12,12);
+        r2.insert(10,12);
+        r1.calarea();
+        r2.calarea();
+    }
+}
+
+
+
+
+class Account {
+    int acc_no;
+    String name;
+    float amount;
+    void insert(int acc, String n, float am){
+        acc_no = acc;
+        name = n;
+        amount = am;
+    }
+    void deposit(float amt){
+        amount = amount +amt;
+        System.out.println(amt+ " deposited");
+    }
+    void withdraw(float amt){
+        if(amt <amount){
+            System.out.println("Sorry you don't have enough balance");
+        }
+        else{
+            amount = amount - amt;
+            System.out.println(amt + " withdrawn");
+        }
+    }
+    void checkbalance(){
+        System.out.println("You have this amount in your account"+amount);
+    }
+    void display(){
+        System.out.println(acc_no+" "+ name+ " "+ amount);
+    }
+}
+class scratch_2{
+    public static void main(String args[]){
+        Account a1 = new Account();
+        a1.insert(23456,"Shan",10000);
+        a1.display();
+        a1.checkbalance();
+        a1.deposit(1900);
+        a1.checkbalance();
+        a1.withdraw(1000);
+        a1.checkbalance();
+        a1.display();
+    }
+}

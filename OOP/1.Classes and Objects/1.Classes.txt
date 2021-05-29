@@ -1,0 +1,11 @@
+class Scratch {
+    int id ;
+    String name;
+}
+class TestStudent{
+    public static void main(String args[]){
+        Scratch s1 = new Scratch();
+        System.out.println(s1.id);
+        System.out.println(s1.name);
+    }
+}

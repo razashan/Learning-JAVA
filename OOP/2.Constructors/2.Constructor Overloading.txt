@@ -1,0 +1,24 @@
+class Scratch{
+    int id;
+    String name;
+    int age;
+
+    Scratch(int i, String n){
+        id = i;
+        name = n;
+    }
+    Scratch(int i , String n, int ag){
+        id = i;
+        name = n;
+        age = ag;
+    }
+    void display(){
+        System.out.println(id+" "+name+" "+age);
+    }
+    public static void main(String args[]){
+        Scratch s1 = new Scratch(12,"Shan");
+        Scratch s2 = new Scratch(13,"Matthew",14);
+        s1.display();
+        s2.display();
+    }
+}
