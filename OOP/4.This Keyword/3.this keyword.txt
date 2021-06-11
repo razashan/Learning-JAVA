@@ -1,0 +1,14 @@
+this: to invoke current class method
+class Arr{
+    void m(){
+        System.out.println("hello m");
+    }
+    void n(){
+        System.out.println("hello n");
+        this.m();
+    }
+    public static void main(String args[]){
+        Arr a = new Arr();
+        a.n();
+    }
+}

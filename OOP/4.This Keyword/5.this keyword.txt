@@ -1,0 +1,28 @@
+Real usage of this() constructor call
+
+The this() constructor call should be used to reuse the constructor from the constructor. It maintains the chain between the constructors i.e. it is used for constructor chaining. Let's see the example given below that displays the actual use of this keyword.
+
+class Arr{
+    int rollno;
+    String name,course;
+    float fee;
+    Arr(int rollno,String name, String course){
+        this.rollno = rollno;
+        this.name = name;
+        this.course = course;
+    }
+    Arr(int rollno,String name,String course, float fee){
+        this(rollno,name,course);
+        this.fee = fee;
+    }
+    void display(){
+        System.out.println(rollno+" "+name+" "+course+" "+fee);
+    }
+
+    public static void main(String args[]){
+        Arr a1 = new Arr(111,"Shan","Programming");
+        Arr a2 = new Arr(113,"Kevin","Java",1000);
+        a1.display();
+        a2.display();
+    }
+}

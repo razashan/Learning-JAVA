@@ -1,0 +1,20 @@
+class Arr{
+    int rollno;
+    String name;
+    float fee;
+    Arr(int rollno, String name, float fee){
+        this.rollno = rollno;
+        this.name = name;
+        this.fee = fee;
+    }
+    void display(){
+        System.out.println(rollno+" "+name+" "+fee);
+    }
+    public static void main(String args[]){
+        Arr a1 = new Arr(111,"Shan",2000);
+        Arr a2 = new Arr(112,"Kevin",3000);
+        a1.display();
+        a2.display();
+
+    }
+}

@@ -1,0 +1,33 @@
+class Arr{
+    int a;
+    int b;
+    public static void setData(int a , int b){
+        a = a;
+        b = b;
+    }
+    public static void main(String args[]){
+        setData(3,4);
+        Arr a = new Arr();
+        System.out.println(a.a);
+        System.out.println(a.b);
+
+    }
+}
+-----------------------------------------------------------------------
+
+class Arr{
+    int a;
+    int b;
+    public  void setData(int a , int b){
+        this.a = a;
+        this.b = b;
+    }
+    public static void main(String args[]){
+
+        Arr a = new Arr();
+        a.setData(3,4);
+        System.out.println(a.a);
+        System.out.println(a.b);
+
+    }
+}
